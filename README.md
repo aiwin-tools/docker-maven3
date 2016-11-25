@@ -18,7 +18,7 @@ Build
 
 Run `build.sh` script to build and push the image to default location
 
-    aiwin/rabbitmq-stomp:latest
+    aiwin/maven3-base:latest
 
 If you want to build and push the image to diferent location, define the following
 variables before the execution of the script:
