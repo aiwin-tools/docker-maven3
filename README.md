@@ -8,9 +8,7 @@ Apache Maven is a software project management and comprehension tool. This image
 Usage
 --------------
 
-There is an assumption you have installed [docker-compose](https://docs.docker.com/compose/)
-
-    docker-compose up
+    docker run -it --rm --name my-maven-project -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven aiwin/maven3-base:latest mvn clean install
 
 
 Build
