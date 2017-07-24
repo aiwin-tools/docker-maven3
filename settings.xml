@@ -17,6 +17,7 @@
             </activation>
             <properties>
                 <sonar.host.url>${SONAR_HOST_URL}</sonar.host.url>
+                <sonar.login>${SONAR_TOKEN}</sonar.login>
                 <sonar.issuesReport.console.enable>true</sonar.issuesReport.console.enable>
                 <sonar.hipchat.disabled>false</sonar.hipchat.disabled>
                 <sonar.hipchat.room>${HIPCHAT_ROOM}</sonar.hipchat.room>
