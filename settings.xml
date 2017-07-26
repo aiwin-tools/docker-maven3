@@ -1,0 +1,34 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                       https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>/cache/.m2</localRepository>
+    <interactiveMode>false</interactiveMode>
+    <usePluginRegistry />
+    <offline />
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <servers />
+    <mirrors />
+    <proxies />
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.host.url>${env.SONAR_HOST_URL}</sonar.host.url>
+                <sonar.login>${env.SONAR_TOKEN}</sonar.login>
+                <sonar.issuesReport.console.enable>true</sonar.issuesReport.console.enable>
+                <sonar.hipchat.disabled>false</sonar.hipchat.disabled>
+                <sonar.hipchat.room>${env.HIPCHAT_ROOM}</sonar.hipchat.room>
+                <sonar.hipchat.token>${env.HIPCHAT_TOKEN}</sonar.hipchat.token>
+                <sonar.issuesReport.html.enable>true</sonar.issuesReport.html.enable>
+                <sonar.gitlab.commit_sha>${env.CI_COMMIT_SHA}</sonar.gitlab.commit_sha>
+                <sonar.gitlab.ref>${env.CI_COMMIT_REF_NAME}</sonar.gitlab.ref>
+                <sonar.gitlab.user_token>${env.GITLAB_TOKEN}</sonar.gitlab.user_token>
+                <sonar.gitlab.project_id>${env.CI_PROJECT_PATH}</sonar.gitlab.project_id>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles />
+</settings>
