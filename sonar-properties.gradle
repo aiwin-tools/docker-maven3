@@ -1,0 +1,13 @@
+sonarqube {
+    properties {
+        property "sonar.host.url", System.env.SONAR_HOST_URL
+        property "sonar.login", System.env.SONAR_TOKEN
+        property "sonar.issuesReport.console.enable", true
+        property "sonar.hipchat.room", System.env.HIPCHAT_ROOM
+        property "sonar.hipchat.token", System.env.HIPCHAT_TOKEN
+        property "sonar.issuesReport.html.enable", true
+        property "sonar.gitlab.ref", System.env.CI_COMMIT_REF_NAME
+        property "sonar.gitlab.user_token", System.env.GITLAB_TOKEN
+        property "sonar.gitlab.project_id", System.env.CI_PROJECT_PATH
+    }
+}
