@@ -7,3 +7,9 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "/tmp/get-pip.py" && \
   pip install awscli --ignore-installed six
 
 ADD settings.xml $MAVEN_CONFIG
+
+ADD sonar-properties.gradle $HOME
+
+ADD quality_gate.sh $HOME
+
+ADD check_build.sh $HOME
