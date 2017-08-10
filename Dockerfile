@@ -8,6 +8,6 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "/tmp/get-pip.py" && \
   python /tmp/get-pip.py && \
   pip install awscli --ignore-installed six
 
-RUN git clone https://github.com/aiwin-tools/devops-scripts.git "$USER_HOME_DIR/scripts"
+RUN git clone https://github.com/aiwin-tools/devops-scripts.git "$HOME/scripts"
 
 ADD settings.xml $MAVEN_CONFIG
