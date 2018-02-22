@@ -19,7 +19,7 @@
                 <sonar.host.url>${env.SONAR_HOST_URL}</sonar.host.url>
                 <sonar.login>${env.SONAR_TOKEN}</sonar.login>
                 <sonar.issuesReport.console.enable>true</sonar.issuesReport.console.enable>
-                <sonar.hipchat.disabled>false</sonar.hipchat.disabled>
+                <sonar.hipchat.disabled>true</sonar.hipchat.disabled>
                 <sonar.hipchat.room>${env.HIPCHAT_ROOM}</sonar.hipchat.room>
                 <sonar.hipchat.token>${env.HIPCHAT_TOKEN}</sonar.hipchat.token>
                 <sonar.issuesReport.html.enable>true</sonar.issuesReport.html.enable>
