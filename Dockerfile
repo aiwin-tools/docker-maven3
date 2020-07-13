@@ -12,4 +12,4 @@ RUN pip3 install aws-sam-cli
 
 RUN git clone https://github.com/aiwin-tools/devops-scripts.git "$HOME/scripts"
 
-ADD settings.xml $MAVEN_CONFIG
+COPY settings.xml $MAVEN_CONFIG/
