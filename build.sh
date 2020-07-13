@@ -2,7 +2,7 @@
 
 [[ -z "$REPOSITORY" ]] && REPOSITORY="maven3-base"
 [[ -z "$REGISTRY" ]] && REGISTRY="aiwin"
-[[ -z "$TAG" ]] && TAG="latest"
+[[ -z "$TAG" ]] && TAG="3.6-jdk-11"
 
 # Build docker image
 docker build -t $REGISTRY/$REPOSITORY:$TAG .

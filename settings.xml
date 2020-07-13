@@ -6,7 +6,24 @@
     <pluginGroups>
         <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
     </pluginGroups>
-    <servers />
+    <servers>
+        <server>
+            <id>gitlab-maven</id>
+            <configuration>
+                <httpHeaders>
+                    <property>
+                        <name>Job-Token</name>
+                        <value>${env.CI_JOB_TOKEN}</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+        <server>
+            <id>repsy</id>
+            <username>aiwin</username>
+            <password>${env.REPSY_PASSWORD}</password>
+        </server>
+    </servers>
     <mirrors />
     <proxies />
     <profiles>
@@ -19,13 +36,7 @@
                 <sonar.host.url>${env.SONAR_HOST_URL}</sonar.host.url>
                 <sonar.login>${env.SONAR_TOKEN}</sonar.login>
                 <sonar.issuesReport.console.enable>true</sonar.issuesReport.console.enable>
-                <sonar.hipchat.disabled>true</sonar.hipchat.disabled>
-                <sonar.hipchat.room>${env.HIPCHAT_ROOM}</sonar.hipchat.room>
-                <sonar.hipchat.token>${env.HIPCHAT_TOKEN}</sonar.hipchat.token>
                 <sonar.issuesReport.html.enable>true</sonar.issuesReport.html.enable>
-                <sonar.gitlab.ref>${env.CI_COMMIT_REF_NAME}</sonar.gitlab.ref>
-                <sonar.gitlab.user_token>${env.GITLAB_TOKEN}</sonar.gitlab.user_token>
-                <sonar.gitlab.project_id>${env.CI_PROJECT_PATH}</sonar.gitlab.project_id>
             </properties>
         </profile>
     </profiles>
